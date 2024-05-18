@@ -80,8 +80,8 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener("DOMContentLoaded", function() {
     // Add event listener to the "End Chat" button
     document.getElementById("end-chat").addEventListener("click", function() {
-        // Redirect to userform.html
-        window.location.href = "userform.html";
+        // Redirect to index.html
+        window.location.href = "index.html";
     });
 });
 
