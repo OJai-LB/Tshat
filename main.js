@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function() {
         messageElement.innerHTML = `
         <div class="flex flex-col w-full max-w-[620px] leading-1.5 p-4 bg-[#14de9e] rounded-tl-xl rounded-bl-xl rounded-br-xl rounded-tr-none dark:bg-[#3cd6a5]">
             <span class="text-xs flex justify-end  font-normal text-[#0b7d59] dark:text-[#247d61]">${getCurrentTime()}</span>
-            <p class="text-sm font-normal py-2.5 dark:text-white">${messageText}</p>
+            <p class="text-sm font-normal py-2.5 text-white dark:text-[#212121]">${messageText}</p>
             <span class="text-xs flex justify-end font-normal text-[#0b7d59] dark:text-[#247d61]">Delivered</span>
         </div>
         `;
