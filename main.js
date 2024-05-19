@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function() {
     const dropdownBtn = document.querySelector(".dropbtn");
     const dropdownContent = document.querySelector(".dropdown-content");
@@ -12,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
         dropdownContent.classList.remove("hidden");
     });
 
-    dropdownContainer.addEventListener("mouseleave", function() { 
+    dropdownContainer.addEventListener("mouseleave", function() {
         dropdownContent.classList.add("hidden");
     });
 
@@ -25,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function() {
         rightUserName.textContent = username;
     }
 });
-
 
 document.addEventListener("DOMContentLoaded", function() {
     const dropdownIcon = document.getElementById("dropdownIcon");
@@ -55,7 +53,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 /* Color Mode Change */
-
 document.addEventListener("DOMContentLoaded", function() {
     // Add event listener to the color mode button
     document.getElementById("color-mode").addEventListener("click", function() {
@@ -74,9 +71,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-
 /* End Chat */
-
 document.addEventListener("DOMContentLoaded", function() {
     // Add event listener to the "End Chat" button
     document.getElementById("end-chat").addEventListener("click", function() {
@@ -85,13 +80,19 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-
-/* Message sending static*/
-
+/* Message sending with current time */
 document.addEventListener("DOMContentLoaded", function() {
     const sendMessageBtn = document.getElementById("sendMessageBtn");
     const messageInput = document.getElementById("messageInput");
     const messageContainer = document.getElementById("messageContainer");
+
+    // Function to get the current time
+    function getCurrentTime() {
+        const now = new Date();
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        return `${hours}:${minutes}`;
+    }
 
     // Function to send a message
     function sendMessage() {
@@ -102,10 +103,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Create a new message element
         const messageElement = document.createElement("div");
-   
-        messageElement.classList.add("bg-[#14de9e]", "dark:bg-[#3cd6a5]","float-right", "text-white", "px-4", "py-2", "rounded-lg", "mb-4");
+        messageElement.classList.add("flex", "items-start", "gap-2.5", "float-right");
 
-        messageElement.textContent = messageText;
+        messageElement.innerHTML = `
+        <div class="flex flex-col w-full max-w-[620px] leading-1.5 p-4 bg-[#14de9e] rounded-tl-xl rounded-bl-xl rounded-br-xl rounded-tr-none dark:bg-[#3cd6a5]">
+            <span class="text-xs flex justify-end  font-normal text-[#0b7d59] dark:text-[#247d61]">${getCurrentTime()}</span>
+            <p class="text-sm font-normal py-2.5 dark:text-white">${messageText}</p>
+            <span class="text-xs flex justify-end font-normal text-[#0b7d59] dark:text-[#247d61]">Delivered</span>
+        </div>
+        `;
 
         // Append the message to the message container
         messageContainer.appendChild(messageElement);

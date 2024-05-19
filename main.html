@@ -5,13 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="main.js"></script>
-    <link rel="icon" href="Media\Icons\dark-logo.svg" type="image/x-icon" />
+    <link rel="icon" href="Media/Icons/dark-logo.svg" type="image/x-icon" />
     <title>Tshat</title>
 </head>
-<!-- dark:bg-[#262626] -->
 <body class="bg-cover" style="background-image: url(Media/Background/Light-Bg.png);">
 
-    
     <!-- Top bar -->
     <header class="fixed top-0 w-full justify-between bg-gray-100 dark:bg-[#212121] flex items-center">
         <!-- Left User -->
@@ -21,23 +19,23 @@
             </div>
             <p class="ml-4 text-lg font-semibold text-gray-800 dark:text-[#c4c4c4]">Chatter</p>
         </div>
-<!-- Button and Menu -->
-            <div class="flex items-center justify-center"> <!-- Center th dropdown button -->
-                <!-- Dropdown menu -->
-                <div class="dropdown-container relative">
-                    <!-- Dropdown button -->
-                    <div class="dropdown relative">
-                        <img src="Media/Icons/caret-down-light.svg" alt="Dropdown" class="dropbtn w-6 h-6" id="dropdownIcon">
-                        <!-- Dropdown content -->
-                        <div class="dropdown-content hidden bg-white rounded-lg shadow-lg mt-0 w-32 absolute top-full transform -translate-x-1/2 left-1/2">
-                            <!-- Menu items -->
-                            <button id="color-mode" class="block px-4 py-2 bg-[#14de9e] dark:bg-[#3cd6a5] text-white font-semibold rounded-t-lg w-full hover:bg-[#45f5bd] dark:hover:bg-[#45f5bd] transition duration-100">Color Mode</button>
-                            <button id="rate-chat" class="block px-4 py-2 bg-[#14de9e] dark:bg-[#3cd6a5] text-white font-semibold w-full hover:bg-[#45f5bd] dark:hover:bg-[#45f5bd] transition duration-100">Rate Chat</button>
-                            <button id="end-chat" class="block px-4 py-2 bg-[#14de9e] dark:bg-[#3cd6a5] text-white font-semibold rounded-b-lg w-full hover:bg-[#45f5bd] dark:hover:bg-[#45f5bd] transition duration-100">End Chat</button>
-                        </div>
+        <!-- Button and Menu -->
+        <div class="flex items-center justify-center"> <!-- Center th dropdown button -->
+            <!-- Dropdown menu -->
+            <div class="dropdown-container relative">
+                <!-- Dropdown button -->
+                <div class="dropdown relative">
+                    <img src="Media/Icons/caret-down-light.svg" alt="Dropdown" class="dropbtn w-6 h-6" id="dropdownIcon">
+                    <!-- Dropdown content -->
+                    <div class="dropdown-content hidden bg-white rounded-lg shadow-lg mt-0 w-32 absolute top-full transform -translate-x-1/2 left-1/2">
+                        <!-- Menu items -->
+                        <button id="color-mode" class="block px-4 py-2 bg-[#14de9e] dark:bg-[#3cd6a5] text-white font-semibold rounded-t-lg w-full hover:bg-[#45f5bd] dark:hover:bg-[#45f5bd] transition duration-100">Color Mode</button>
+                        <button id="rate-chat" class="block px-4 py-2 bg-[#14de9e] dark:bg-[#3cd6a5] text-white font-semibold w-full hover:bg-[#45f5bd] dark:hover:bg-[#45f5bd] transition duration-100">Rate Chat</button>
+                        <button id="end-chat" class="block px-4 py-2 bg-[#14de9e] dark:bg-[#3cd6a5] text-white font-semibold rounded-b-lg w-full hover:bg-[#45f5bd] dark:hover:bg-[#45f5bd] transition duration-100">End Chat</button>
                     </div>
-                </div>                                             
-            </div>                     
+                </div>
+            </div>                                             
+        </div>                     
         <!-- Right User -->
         <div class="flex items-center">
             <p class="mr-4 text-lg font-semibold text-gray-800 dark:text-[#c4c4c4] right-user-name">Name</p>
@@ -47,21 +45,15 @@
         </div>
     </header>
 
-
     <!-- Container of messages -->
-    <div id="messageContainer" class="mx-8 my-20x ml-48 mr-48 overflow-y-auto">
-    <!-- Messages will be appended here -->
+    <div id="messageContainer" class="mx-8 my-20 ml-48 mr-48 overflow-y-auto space-y-4">
+        <!-- Messages will be appended here -->
     </div>
-    
     
     <!-- Bottom Bar -->
     <footer class="fixed bottom-0 left-0 w-full bg-gray-100 dark:bg-[#212121] border-t border-gray-300 dark:border-[#5e5e5e] px-4 py-2 flex items-center">
         <input id="messageInput" type="text" placeholder="Type your message..." class="flex-grow px-4 py-2 border rounded-lg focus:outline-none focus:border-[#45f5bd] dark:border-[#5e5e5e] transition duration-300 dark:bg-[#262626] dark:text-[#c4c4c4] dark:placeholder-[#5e5e5e]">
         <button id="sendMessageBtn" class="ml-4 px-6 py-2 bg-[#14de9e] dark:bg-[#3cd6a5] text-white font-semibold rounded-lg hover:bg-[#45f5bd] dark:hover:bg-[#45f5bd] transition duration-300">Send</button>
     </footer>
-
-
-
-
 </body>
 </html>
