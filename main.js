@@ -74,9 +74,29 @@ document.addEventListener("DOMContentLoaded", function() {
 /* End Chat */
 document.addEventListener("DOMContentLoaded", function() {
     // Add event listener to the "End Chat" button
-    document.getElementById("end-chat").addEventListener("click", function() {
+    const endChatButton = document.getElementById("end-chat");
+
+    endChatButton.addEventListener("click", function() {
+        // Show the modal
+        const endChatModal = document.getElementById("endChatModal");
+        endChatModal.classList.remove("hidden");
+    });
+
+    // Add event listener to the "Confirm End Chat" button
+    const confirmEndChatButton = document.getElementById("confirmEndChat");
+
+    confirmEndChatButton.addEventListener("click", function() {
         // Redirect to SignInForm
         window.location.href = "SignInForm.html";
+    });
+
+    // Add event listener to the "Cancel" button in the modal
+    const cancelEndChatButton = document.getElementById("cancelEndChat");
+
+    cancelEndChatButton.addEventListener("click", function() {
+        // Hide the modal
+        const endChatModal = document.getElementById("endChatModal");
+        endChatModal.classList.add("hidden");
     });
 });
 
