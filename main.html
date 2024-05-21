@@ -35,7 +35,8 @@
                     </div>
                 </div>
             </div>                                             
-        </div>                     
+        </div>       
+        
         <!-- Right User -->
         <div class="flex items-center">
             <p class="mr-4 text-lg font-semibold text-gray-800 dark:text-[#c4c4c4] right-user-name">Name</p>
@@ -55,5 +56,17 @@
         <input id="messageInput" maxlength="65536" type="text" placeholder="Type your message..." class="flex-grow px-4 py-2 border rounded-lg focus:outline-none focus:border-[#45f5bd] dark:border-[#5e5e5e] transition duration-300 dark:bg-[#262626] dark:text-[#c4c4c4] dark:placeholder-[#5e5e5e]">
         <button id="sendMessageBtn" class="ml-4 px-6 py-2 bg-[#14de9e] dark:bg-[#3cd6a5] text-white dark:text-[#262626] font-semibold rounded-lg hover:bg-[#45f5bd] dark:hover:bg-[#45f5bd] transition duration-300">Send</button>
     </footer>
+    
+        <!-- Modal for End Chat Confirmation -->
+        <div id="endChatModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div class="bg-white dark:bg-[#262626] rounded-lg shadow-lg p-6 w-96">
+                <p class="text-lg font-semibold text-gray-800 dark:text-[#c4c4c4] mb-4">Are you sure you want to end this chat?</p>
+                <div class="flex justify-end space-x-4">
+                    <button id="cancelEndChat" class="px-4 py-2 bg-gray-300 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-lg">Cancel</button>
+                    <button id="confirmEndChat" class="px-4 py-2 bg-[#14de9e] dark:bg-[#3cd6a5] text-white dark:text-[#262626] rounded-lg">End</button>
+                </div>
+            </div>
+        </div>    
 </body>
 </html>
+        
